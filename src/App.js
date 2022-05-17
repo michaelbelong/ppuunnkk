@@ -6,14 +6,18 @@ import {
   Button,
   VStack,
   HStack,
+  Flex,
   Code,
   Grid,
+  Image,
   theme,
   Toast,
+  useToast,
   extendTheme
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './components/Logo';
+import wordmark from './𝙿𝚄𝙽𝙺.png'
 import catchPhrases from './components/catchPhrases'
 
 // Click WEN button
@@ -36,6 +40,26 @@ const myTheme = extendTheme({
 
 function App() {
   
+  function CustomToastExample() {
+    const toast = useToast()
+    return (
+      <Button
+        onClick={() =>
+          toast({
+            position: 'bottom-left',
+            render: () => (
+              <Box color='white' p={3} bg='blue.500'>
+                Hello World
+              </Box>
+            ),
+          })
+        }
+      >
+        Show Toast
+      </Button>
+    )
+  }
+  
   const randomPhrase = catchPhrases[Math.floor(Math.random()*catchPhrases.length)];
   
   const generateRandomPhrase = () => {
@@ -57,9 +81,10 @@ function App() {
       <Box textAlign="center" fontSize="xl">
         <Grid minH="100vh" p={3}>
           <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <HStack>
+          <VStack spacing={100}>
+            <Image src={wordmark} alt="𝙿𝙴𝙾𝙿𝙻𝙴’𝚂 𝚄𝙽𝙸𝚃𝙴𝙳 𝙸𝙽 𝙽𝙾𝙽-𝙺𝙾𝙽𝙵𝙾𝚁𝙼𝙸𝚃𝚈" pointerEvents="none" height="24vmin" />
+            <Logo h="42vmin" alt="▛▀ ▙▟ ▛▟ ▙▚ ▚▞" pointerEvents="none" />
+            <Flex minWidth='max-content' alignItems='center' gap='2'>
             <Button
               backgroundColor="green"
               color="black"
@@ -101,8 +126,9 @@ function App() {
               onClick={generateRandomPhrase}
             >
               𝚆𝙴𝙽
+              {generateRandomPhrase}
             </Button>
-            </HStack>
+            </Flex>
           </VStack>
         </Grid>
       </Box>
