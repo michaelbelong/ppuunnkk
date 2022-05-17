@@ -62,7 +62,7 @@ function Toaster() {
 					p = { 4 } bg = 'white'
 					fontSize = 'lg'
 					onClick = { generateRandomPhrase }
-					isClosable = 'true'
+					marginBottom = '1vh'
 					>
 					{ randomPhrase }
 					<
