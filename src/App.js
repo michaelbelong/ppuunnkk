@@ -16,10 +16,10 @@ import {
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './components/Logo';
-import WordmarkLight from './𝙿𝙾𝙽𝙺.png'
-import WordmarkDark from './𝙿𝚄𝙽𝙺.png'
-import catchPhrases from './components/catchPhrases'
-import Toaster from './components/Toaster'
+import WordmarkLight from './𝙿𝙾𝙽𝙺.png';
+import WordmarkDark from './𝙿𝚄𝙽𝙺.png';
+import catchPhrases from './components/catchPhrases';
+import Toaster from './components/Toaster';
 
 // Click WEN button
 // Select Quote from Array
