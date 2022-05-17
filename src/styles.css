@@ -19,3 +19,11 @@ body.chakra-ui-dark {
 	  color: black;
 	  z-index: 0;
 }
+
+.Wordmark.chakra-ui-light {
+	background-image: url(./𝙿𝙾𝙽𝙺.png) !important;
+}
+
+.Wordmark.chakra-ui-dark {
+	background-image: url(./𝙿𝚄𝙽𝙺.png) !important;
+}

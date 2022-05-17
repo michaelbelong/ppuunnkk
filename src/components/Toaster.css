@@ -1,0 +1,7 @@
+.toaster {
+	transition: transform 166ms ease-in-out, color 300ms ease-in-out;
+}
+
+.toaster:hover {
+	transform: scale(1.0666);
+}

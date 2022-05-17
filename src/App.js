@@ -11,14 +11,15 @@ import {
   Grid,
   Image,
   theme,
-  Toast,
   useToast,
   extendTheme
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './components/Logo';
-import wordmark from './𝙿𝚄𝙽𝙺.png'
+import WordmarkLight from './𝙿𝙾𝙽𝙺.png'
+import WordmarkDark from './𝙿𝚄𝙽𝙺.png'
 import catchPhrases from './components/catchPhrases'
+import Toaster from './components/Toaster'
 
 // Click WEN button
 // Select Quote from Array
@@ -40,25 +41,7 @@ const myTheme = extendTheme({
 
 function App() {
   
-  function CustomToastExample() {
-    const toast = useToast()
-    return (
-      <Button
-        onClick={() =>
-          toast({
-            position: 'bottom-left',
-            render: () => (
-              <Box color='white' p={3} bg='blue.500'>
-                Hello World
-              </Box>
-            ),
-          })
-        }
-      >
-        Show Toast
-      </Button>
-    )
-  }
+
   
   const randomPhrase = catchPhrases[Math.floor(Math.random()*catchPhrases.length)];
   
@@ -82,7 +65,7 @@ function App() {
         <Grid minH="100vh" p={3}>
           <ColorModeSwitcher justifySelf="flex-end" />
           <VStack spacing={100}>
-            <Image src={wordmark} alt="𝙿𝙴𝙾𝙿𝙻𝙴’𝚂 𝚄𝙽𝙸𝚃𝙴𝙳 𝙸𝙽 𝙽𝙾𝙽-𝙺𝙾𝙽𝙵𝙾𝚁𝙼𝙸𝚃𝚈" pointerEvents="none" height="24vmin" />
+            <Image src={WordmarkLight} className="Wordmark" alt="𝙿𝙴𝙾𝙿𝙻𝙴’𝚂 𝚄𝙽𝙸𝚃𝙴𝙳 𝙸𝙽 𝙽𝙾𝙽-𝙺𝙾𝙽𝙵𝙾𝚁𝙼𝙸𝚃𝚈" pointerEvents="none" height="24vmin" />
             <Logo h="42vmin" alt="▛▀ ▙▟ ▛▟ ▙▚ ▚▞" pointerEvents="none" />
             <Flex minWidth='max-content' alignItems='center' gap='2'>
             <Button
@@ -115,19 +98,7 @@ function App() {
             >
               𝙳𝙸𝚂𝙲𝙾𝚁𝙳
             </Button>
-            <Button
-              backgroundColor="yellow"
-              color="black"
-              href="https://www.twitter.com/ppuunnkkdotcom"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="outline"
-              onClick={generateRandomPhrase}
-            >
-              𝚆𝙴𝙽
-              {generateRandomPhrase}
-            </Button>
+            <Toaster />
             </Flex>
           </VStack>
         </Grid>
