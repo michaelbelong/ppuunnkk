@@ -4,15 +4,18 @@ import {
   Box,
   Text,
   Button,
+  Link,
   VStack,
   HStack,
   Flex,
+  Spacer,
   Code,
   Grid,
   Image,
   theme,
   useToast,
-  extendTheme
+  extendTheme,
+  useMediaQuery
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './components/Logo';
@@ -29,7 +32,6 @@ import Toaster from './components/Toaster';
 
 const myTheme = extendTheme({
   colors: {
-      whiteAlpha: 'rgba(255, 255, 255, 0.16)',
       green: '#00FF46',
       blue: '#0075FF',
       orange: '#FF7F00',
@@ -40,8 +42,6 @@ const myTheme = extendTheme({
 });
 
 function App() {
-  
-
   
   const randomPhrase = catchPhrases[Math.floor(Math.random()*catchPhrases.length)];
   
@@ -65,41 +65,68 @@ function App() {
         <Grid minH="100vh" p={3}>
           <ColorModeSwitcher justifySelf="flex-end" />
           <VStack spacing={100}>
-            <Image src={WordmarkLight} className="Wordmark" alt="𝙿𝙴𝙾𝙿𝙻𝙴’𝚂 𝚄𝙽𝙸𝚃𝙴𝙳 𝙸𝙽 𝙽𝙾𝙽-𝙺𝙾𝙽𝙵𝙾𝚁𝙼𝙸𝚃𝚈" pointerEvents="none" height="24vmin" />
-            <Logo h="42vmin" alt="▛▀ ▙▟ ▛▟ ▙▚ ▚▞" pointerEvents="none" />
-            <Flex minWidth='max-content' alignItems='center' gap='2'>
+            <Image
+              w={['77vw','50vw','42vw','24vw']}
+              h='auto'
+              src={WordmarkLight} className="Wordmark" alt="𝙿𝙴𝙾𝙿𝙻𝙴’𝚂 𝚄𝙽𝙸𝚃𝙴𝙳 𝙸𝙽 𝙽𝙾𝙽-𝙺𝙾𝙽𝙵𝙾𝚁𝙼𝙸𝚃𝚈" pointerEvents="none" />
+            <Logo 
+              w={['77vw','68vw','42vw','24vw']}
+              alt="▛▀ ▙▟ ▛▟ ▙▚ ▚▞"
+              pointerEvents="none" />
+              <Spacer />
+            <Flex
+              direction={ ['column','column','row','row'] } 
+              minWidth='max-content'
+              w={['80vw','77vw','42vw','32vw']}
+              align='center'
+              alignContent='center'
+              alignItems='center'
+              gap='8'
+              >
+              <Spacer />
             <Button
               backgroundColor="green"
+              borderRadius="none"
               color="black"
               // href="https://www.twitter.com/ppuunnkkdotcom"
-              fontSize="2xl"
+              fontSize={['3xl','1xl','1xl','2xl']}
               target="_blank"
               rel="noopener noreferrer"
               onClick={comingSoon}
+              _hover={ { bg: 'black', color: 'green' } }
             >
               𝙼𝙰𝙽𝙸𝙵𝙴𝚂𝚃𝙾
             </Button>
             <Button
               backgroundColor="pink"
+              borderRadius="none"
               color="black"
-              fontSize="2xl"
+              fontSize={['3xl','1xl','1xl','2xl']}
               target="_blank"
               rel="noopener noreferrer"
+              href="https://www.twitter.com/ppuunnkkdotcom"
+              variant="button"
+              _hover={ { bg: 'black', color: 'pink' } }
             >
               𝚃𝚆𝙸𝚃𝚃𝙴𝚁
             </Button>
             <Button
               backgroundColor="orange"
+              borderRadius="none"
               color="black"
-              fontSize="2xl"
+              fontSize={['3xl','1xl','1xl','2xl']}
               target="_blank"
               rel="noopener noreferrer"
               onClick={alsoComingSoon}
+              _hover={ { bg: 'black', color: 'orange' } }
+              variant="outline"
             >
               𝙳𝙸𝚂𝙲𝙾𝚁𝙳
             </Button>
             <Toaster />
+            <Spacer />
             </Flex>
+            <Spacer />
           </VStack>
         </Grid>
       </Box>

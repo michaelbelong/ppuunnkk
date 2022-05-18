@@ -28,50 +28,52 @@ function Toaster() {
 	};
 
 	const toast = useToast();
-	const consoleLog = () => {
-		console.log('You clicked.')
-	};
 
-	const id = 'test-toast'
+	const id = 'toaster'
 
-	return ( <
-		Button className = "toaster"
-		backgroundColor = "yellow"
-		_hover = { { bg: 'black', color: 'yellow' } }
-		color = "black"
-		fontSize = "2xl"
-		borderRadius = "8px"
-		_focus = {
-			{
-				boxShadow: '0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)',
+	return (
+		<Button 
+			className = "toaster"
+			borderRadius="none"
+			backgroundColor = "yellow"
+			_hover = { { bg: 'black', color: 'yellow' } }
+			color = "black"
+			fontSize={['3xl','1xl','1xl','2xl']}
+			_focus = {
+				{
+					boxShadow: '0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)',
+				}
 			}
-		}
-		onClick = {
-			() => {
-			if (!toast.isActive(id)) {
-			toast({
-				position: 'bottom-center',
-				render: () => ( <
-					Box
-					pointerEvents = 'none'
-					minWidth='max-content'
-					alignItems='center'
-					textAlign = 'center'
-					color = 'black'
-					borderRadius = 'xl'
-					p = { 4 } bg = 'white'
-					fontSize = 'lg'
-					onClick = { generateRandomPhrase }
-					marginBottom = '1vh'
-					>
-					{ randomPhrase }
-					<
-					/Box>
-				),
-			})
-		}
-		} }> 𝚆𝙴𝙽 <
-		/Button>
+			onClick = {
+				() => {
+				if (!toast.isActive(id)) {
+				toast({
+					id,
+					position: 'top-center',
+					render: () => ( <
+						Box
+						pointerEvents='none'
+						minWidth='auto'
+						w={['84vw','64vw','64vw','20vw']}
+						alignItems='center'
+						alignContent='center'
+						textAlign='center'
+						color='black'
+						borderRadius='none'
+						p= { 4 }
+						bg='white'
+						fontSize={['2xl','1xl','1xl','2xl']}
+						onClick={ generateRandomPhrase }
+						>
+						{ randomPhrase }
+						<
+						/Box>
+					),
+				})
+			}
+			} }>
+			𝚆𝙴𝙽
+		</Button>
 	)
 };
 
