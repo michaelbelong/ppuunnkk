@@ -31,6 +31,10 @@ import Toaster from './components/Toaster';
 // Dismiss Toast -- Fade Out
 
 const myTheme = extendTheme({
+  config: {
+    useSystemColorMode: false,
+    initialColorMode: "dark",
+  },
   colors: {
       green: '#00FF46',
       blue: '#0075FF',
@@ -60,9 +64,9 @@ function App() {
   }
   
   return (
-    <ChakraProvider theme={myTheme}>
+    <ChakraProvider theme={ myTheme }>
       <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
+        <Grid className='testbaby' minH="100vh" p={3}>
           <ColorModeSwitcher justifySelf="flex-end" />
           <VStack spacing={100}>
             <Image
