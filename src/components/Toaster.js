@@ -72,7 +72,7 @@ function Toaster() {
 				})
 			}
 			} }>
-			𝚆𝙴𝙽
+			𝚆𝙴𝙽?
 		</Button>
 	)
 };
