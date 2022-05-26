@@ -20,7 +20,8 @@ import {
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './components/Logo';
 import WordmarkLight from './𝙿𝙾𝙽𝙺.png';
-import WordmarkDark from './𝙿𝚄𝙽𝙺.png';
+// import WordmarkDark from './𝙿𝚄𝙽𝙺.png';
+import WordmarkDark from './assets/celpunk.gif';
 import catchPhrases from './components/catchPhrases';
 import Toaster from './components/Toaster';
 
@@ -50,9 +51,9 @@ function App() {
   const randomPhrase = catchPhrases[Math.floor(Math.random()*catchPhrases.length)];
   
   const generateRandomPhrase = () => {
-      const randomPhrase = catchPhrases[Math.floor(Math.random()*catchPhrases.length)];
-      console.log(randomPhrase);
-      // setRandomPhrase(randomPhrase);
+    const randomPhrase = catchPhrases[Math.floor(Math.random()*catchPhrases.length)];
+    console.log(randomPhrase);
+    // setRandomPhrase(randomPhrase);
   };
   
   const comingSoon = () => {
@@ -66,13 +67,13 @@ function App() {
   return (
     <ChakraProvider theme={ myTheme }>
       <Box textAlign="center" fontSize="xl">
-        <Grid className='testbaby' minH="100vh" p={3}>
+        <Grid minH="100vh" p={3}>
           <ColorModeSwitcher justifySelf="flex-end" />
           <VStack spacing={100}>
             <Image
               w={['77vw','50vw','42vw','24vw']}
               h='auto'
-              src={WordmarkLight} className="Wordmark" alt="𝙿𝙴𝙾𝙿𝙻𝙴’𝚂 𝚄𝙽𝙸𝚃𝙴𝙳 𝙸𝙽 𝙽𝙾𝙽-𝙺𝙾𝙽𝙵𝙾𝚁𝙼𝙸𝚃𝚈" pointerEvents="none" />
+              src={WordmarkDark} className="Wordmark" alt="𝙿𝙴𝙾𝙿𝙻𝙴’𝚂 𝚄𝙽𝙸𝚃𝙴𝙳 𝙸𝙽 𝙽𝙾𝙽-𝙺𝙾𝙽𝙵𝙾𝚁𝙼𝙸𝚃𝚈" pointerEvents="none" />
             <Logo 
               w={['77vw','68vw','42vw','24vw']}
               alt="▛▀ ▙▟ ▛▟ ▙▚ ▚▞"
@@ -92,14 +93,19 @@ function App() {
               backgroundColor="green"
               borderRadius="none"
               color="black"
-              // href="https://www.twitter.com/ppuunnkkdotcom"
               fontSize={['3xl','1xl','1xl','2xl']}
-              target="_blank"
+              target="_self"
               rel="noopener noreferrer"
               onClick={comingSoon}
               _hover={ { bg: 'black', color: 'green' } }
             >
-              𝙼𝙰𝙽𝙸𝙵𝙴𝚂𝚃𝙾
+              <Link
+              href="https://metanorm.notion.site/b732402a54b94122869b7429c389fb59"
+              variant="none"
+              isExternal
+              >
+              𝙲𝚁𝚃𝙰
+              </Link>
             </Button>
             <Button
               backgroundColor="pink"
@@ -108,24 +114,35 @@ function App() {
               fontSize={['3xl','1xl','1xl','2xl']}
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.twitter.com/ppuunnkkdotcom"
               variant="button"
               _hover={ { bg: 'black', color: 'pink' } }
             >
-              𝚃𝚆𝙸𝚃𝚃𝙴𝚁
+              <Link
+              href="https://www.twitter.com/ppuunnkkdotcom"
+              variant="none"
+              isExternal
+              >
+              𝚃𝚆𝚃𝚁
+              </Link>
             </Button>
             <Button
               backgroundColor="orange"
               borderRadius="none"
               color="black"
               fontSize={['3xl','1xl','1xl','2xl']}
-              target="_blank"
+              target="self"
               rel="noopener noreferrer"
               onClick={alsoComingSoon}
               _hover={ { bg: 'black', color: 'orange' } }
-              variant="outline"
+              variant="none"
             >
-              𝙳𝙸𝚂𝙲𝙾𝚁𝙳
+            <Link
+            href="https://discord.gg/dVHwRRup"
+            variant="none"
+            isExternal
+            >
+              𝙳𝙲𝚁𝙳
+              </Link>
             </Button>
             <Toaster />
             <Spacer />
