@@ -3,17 +3,17 @@
 export const NAV_LINKS  = [
   {
 	key: 1,
-	text: '𝙼𝙰𝙽𝙸𝙵𝙴𝚂𝚃𝙾',
-	link: 'https://twitter.com/okpcnft',
+	text: '𝙲𝚁𝚃𝙰',
+	link: 'https://metanorm.notion.site/b732402a54b94122869b7429c389fb59',
   },
   {
 	key: 2,
-	text: '𝚃𝚆𝙸𝚃𝚃𝙴𝚁',
-	link: 'https://discord.gg/okpc',
+	text: '𝚃𝚆𝚃𝚁',
+	link: 'https://www.twitter.com/ppuunnkkdotcom',
   },
   {
 	key: 3,
-	text: '𝙳𝙸𝚂𝙲𝙾𝚁𝙳',
-	link: 'https://zora.co/collections/0x7183209867489E1047f3A7c23ea1Aed9c4E236E8',
+	text: '𝙳𝙲𝚁𝙳',
+	link: 'https://discord.gg/dVHwRRup',
   }
 ]

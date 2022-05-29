@@ -9,7 +9,6 @@ import {
   HStack,
   Flex,
   Spacer,
-  Code,
   Grid,
   Image,
   theme,
@@ -24,17 +23,13 @@ import WordmarkLight from './𝙿𝙾𝙽𝙺.png';
 import WordmarkDark from './assets/celpunk.gif';
 import catchPhrases from './components/catchPhrases';
 import Toaster from './components/Toaster';
-
-// Click WEN button
-// Select Quote from Array
-// Render Toast to Page
-// Play Pokemon Sound
-// Dismiss Toast -- Fade Out
+import { mode } from '@chakra-ui/theme-tools'
+import "./styles.css";
 
 const myTheme = extendTheme({
   config: {
     useSystemColorMode: false,
-    initialColorMode: "dark",
+    
   },
   colors: {
       green: '#00FF46',
@@ -43,26 +38,21 @@ const myTheme = extendTheme({
       yellow: '#FFFF00',
       chartreuse: '#B5FF00',
       pink: '#FF00C4',
+      darkback: '#192817'
+  },
+  styles: {
+    global: (props) => ({
+      body: {
+        bg: mode('darkback', 'darkback')(props),
+        backgroundImage: mode('linear-gradient(45deg, #0075FF 25%, transparent 25%), linear-gradient(-45deg, #0075FF 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #0075FF 75%), linear-gradient(-45deg, transparent 75%, #0075FF 75%)','linear-gradient(45deg, #B5FF00 25%, transparent 25%), linear-gradient(-45deg, #B5FF00 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #B5FF00 75%), linear-gradient(-45deg, transparent 75%, #B5FF00 75%)'),
+        backgroundSize: '40px 40px',
+        backgroundPosition: '0 0, 0 20px, 20px -20px, -20px 0px'
+      }
+    })
   }
 });
 
 function App() {
-  
-  const randomPhrase = catchPhrases[Math.floor(Math.random()*catchPhrases.length)];
-  
-  const generateRandomPhrase = () => {
-    const randomPhrase = catchPhrases[Math.floor(Math.random()*catchPhrases.length)];
-    console.log(randomPhrase);
-    // setRandomPhrase(randomPhrase);
-  };
-  
-  const comingSoon = () => {
-    console.log("𝙲𝙾𝙼𝙸𝙽𝙶 𝚂𝙾𝙾𝙽");
-  }
-  
-  const alsoComingSoon = () => {
-    console.log("𝙰𝙻𝚂𝙾 𝙲𝙾𝙼𝙸𝙽𝙶 𝚂𝙾𝙾𝙽");
-  }
   
   return (
     <ChakraProvider theme={ myTheme }>
@@ -90,13 +80,12 @@ function App() {
               >
               <Spacer />
             <Button
-              backgroundColor="green"
+              backgroundColor="green" 
               borderRadius="none"
               color="black"
               fontSize={['3xl','1xl','1xl','2xl']}
               target="_self"
               rel="noopener noreferrer"
-              onClick={comingSoon}
               _hover={ { bg: 'black', color: 'green' } }
             >
               <Link
@@ -132,7 +121,6 @@ function App() {
               fontSize={['3xl','1xl','1xl','2xl']}
               target="self"
               rel="noopener noreferrer"
-              onClick={alsoComingSoon}
               _hover={ { bg: 'black', color: 'orange' } }
               variant="none"
             >
