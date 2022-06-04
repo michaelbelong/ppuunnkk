@@ -14,13 +14,14 @@ import {
   theme,
   useToast,
   extendTheme,
-  useMediaQuery
+  useMediaQuery,
+  IconButton
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './components/Logo';
 import WordmarkLight from './𝙿𝙾𝙽𝙺.png';
 // import WordmarkDark from './𝙿𝚄𝙽𝙺.png';
-import WordmarkDark from './assets/celpunk.gif';
+import WordmarkDark from './assets/celpunk2.gif';
 import catchPhrases from './components/catchPhrases';
 import Toaster from './components/Toaster';
 import { mode } from '@chakra-ui/theme-tools'
@@ -52,13 +53,49 @@ const myTheme = extendTheme({
   }
 });
 
+const Okshell = () => (
+  <svg
+    id="Layer_1"
+    data-name="Layer 1"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 7 7"
+  >
+    <path d="M0,0H3V3H0V0ZM2,1H1V2H2Z" fill="#06f" />
+    <path d="M5,0V1H6V2H5V3H4V0ZM6,2V3H7V2ZM6,1V0H7V1Z" fill="#00db80" />
+    <polygon
+      points="6 4 6 5 5 5 5 4 4 4 4 5 4 6 4 7 5 7 5 6 6 6 6 7 7 7 7 6 7 5 7 4 6 4"
+      fill="#ff009d"
+    />
+    <polygon
+      points="2 4 1 4 1 5 1 6 0 6 0 7 1 7 2 7 2 6 2 5 3 5 3 4 2 4"
+      fill="#ffa600"
+    />
+  </svg>
+);
+
 function App() {
   
   return (
     <ChakraProvider theme={ myTheme }>
       <Box textAlign="center" fontSize="xl">
         <Grid minH="100vh" p={3}>
+        <Flex>
+          <Link
+            backgroundColor="black"
+            padding="6px"
+            height="40px"
+            color="current"
+            _hover={ { color: 'green', bgColor: 'white' } }
+            justifySelf="flex-start"
+            href="https://www.oksh.app/"
+            variant="none"
+            isExternal
+          >
+          <Okshell />
+          </Link>
+          <Spacer />
           <ColorModeSwitcher justifySelf="flex-end" />
+          </Flex>
           <VStack spacing={100}>
             <Image
               w={['77vw','50vw','42vw','24vw']}
@@ -125,7 +162,7 @@ function App() {
               variant="none"
             >
             <Link
-            href="https://discord.gg/dVHwRRup"
+            href="https://discord.gg/mJZnJ5Ru"
             variant="none"
             isExternal
             >
