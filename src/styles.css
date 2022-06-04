@@ -52,7 +52,18 @@ Button {
 }
 
 Button:hover {
+	text-decoration: none;
 	/* font-weight: 600 !important; */
 	transform: scale(1.01) !important;
 	/* transition: all 1s ease-in-out; */
+	cursor: default;
+}
+
+IconButton.chakra-ui-light {
+	background-color: #FF00C4;
+}
+
+#Layer_1 {
+  width: 28px;
+  height: 28px;
 }
