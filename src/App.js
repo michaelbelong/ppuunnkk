@@ -18,9 +18,7 @@ import {
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './components/Logo';
-import WordmarkLight from './𝙿𝙾𝙽𝙺.png';
-// import WordmarkDark from './𝙿𝚄𝙽𝙺.png';
-import WordmarkDark from './assets/celpunk.gif';
+import WordmarkDark from './assets/brand/celpunk.gif';
 import catchPhrases from './components/catchPhrases';
 import Toaster from './components/Toaster';
 import { mode } from '@chakra-ui/theme-tools'

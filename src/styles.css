@@ -42,13 +42,6 @@ body.chakra-ui-dark {
   /* z-index: 1; */
 }
 
-.Wordmark.chakra-ui-light {
-	background-image: url(./𝙿𝙾𝙽𝙺.png) !important;
-}
-
-.Wordmark.chakra-ui-dark {
-	background-image: url(./𝙿𝚄𝙽𝙺.png) !important;
-}
 
 Button {
 	font-weight: 400 !important;
