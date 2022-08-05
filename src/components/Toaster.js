@@ -35,8 +35,8 @@ function Toaster() {
 		<Button 
 			className = "toaster"
 			borderRadius="none"
-			backgroundColor = "yellow"
-			_hover = { { bg: 'black', color: 'yellow' } }
+			backgroundColor = "chartreuse"
+			_hover = { { bg: 'black', color: 'chartreuse' } }
 			color = "black"
 			fontSize={['3xl','1xl','1xl','2xl']}
 			_focus = {

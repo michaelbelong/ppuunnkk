@@ -169,6 +169,24 @@ function App() {
               𝙳𝙲𝚁𝙳
               </Link>
             </Button>
+            <Button
+              backgroundColor="yellow"
+              borderRadius="none"
+              color="black"
+              fontSize={['3xl','1xl','1xl','2xl']}
+              target="self"
+              rel="noopener noreferrer"
+              _hover={ { bg: 'black', color: 'yellow' } }
+              variant="none"
+            >
+            <Link
+            href="https://mirror.xyz/metanorm.eth"
+            variant="none"
+            isExternal
+            >
+              𝙼𝙸𝚁𝚁
+              </Link>
+            </Button>
             <Toaster />
             <Spacer />
             </Flex>
