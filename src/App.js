@@ -18,7 +18,8 @@ import {
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './components/Logo';
-import WordmarkDark from './assets/brand/celpunk.gif';
+import { NoiseOverlay } from './components/NoiseOverlay';
+import WordmarkDark from './assets/brand/ppuunnkk.gif';
 import catchPhrases from './components/catchPhrases';
 import Toaster from './components/Toaster';
 import { mode } from '@chakra-ui/theme-tools'
@@ -43,7 +44,7 @@ const myTheme = extendTheme({
     global: (props) => ({
       body: {
         bg: mode('darkback', 'darkback')(props),
-        backgroundImage: mode('linear-gradient(45deg, #0075FF 25%, transparent 25%), linear-gradient(-45deg, #0075FF 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #0075FF 75%), linear-gradient(-45deg, transparent 75%, #0075FF 75%)','linear-gradient(45deg, #B5FF00 25%, transparent 25%), linear-gradient(-45deg, #B5FF00 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #B5FF00 75%), linear-gradient(-45deg, transparent 75%, #B5FF00 75%)'),
+        backgroundColor: '#192817',
         backgroundSize: '40px 40px',
         backgroundPosition: '0 0, 0 20px, 20px -20px, -20px 0px'
       }
@@ -77,34 +78,32 @@ function App() {
   
   return (
     <ChakraProvider theme={ myTheme }>
+    <>
       <Box textAlign="center" fontSize="xl">
         <Grid minH="100vh" p={3}>
         <Flex>
           <Link
-            backgroundColor="black"
-            padding="6px"
-            height="40px"
-            color="current"
-            _hover={ { color: 'green', bgColor: 'white' } }
-            justifySelf="flex-start"
-            href="https://www.oksh.app/"
-            variant="none"
-            isExternal
+          backgroundColor="none"
+          padding="6px"
+          height="fit-content"
+          color="current"
+          _hover={ { color: 'green', bgColor: 'chartreuse' } }
+          justifySelf="flex-start"
+          href="https://www.punk.energy/"
+          variant="none"
+          isExternal
           >
-          <Okshell />
+          <Image
+          w={['5vw','5vw','5vw','5vw']}
+          h='auto'
+          src={WordmarkDark} className="Wordmark" alt="𝙿𝙴𝙾𝙿𝙻𝙴’𝚂 𝚄𝙽𝙸𝚃𝙴𝙳 𝙸𝙽 𝙽𝙾𝙽-𝙺𝙾𝙽𝙵𝙾𝚁𝙼𝙸𝚃𝚈" pointerEvents="none" />
           </Link>
           <Spacer />
           <ColorModeSwitcher justifySelf="flex-end" />
           </Flex>
           <VStack spacing={100}>
-            <Image
-              w={['77vw','50vw','42vw','24vw']}
-              h='auto'
-              src={WordmarkDark} className="Wordmark" alt="𝙿𝙴𝙾𝙿𝙻𝙴’𝚂 𝚄𝙽𝙸𝚃𝙴𝙳 𝙸𝙽 𝙽𝙾𝙽-𝙺𝙾𝙽𝙵𝙾𝚁𝙼𝙸𝚃𝚈" pointerEvents="none" />
-            <Logo 
-              w={['77vw','68vw','42vw','24vw']}
-              alt="▛▀ ▙▟ ▛▟ ▙▚ ▚▞"
-              pointerEvents="none" />
+            
+            
               <Spacer />
             <Flex
               direction={ ['column','column','row','row'] } 
@@ -180,7 +179,7 @@ function App() {
               variant="none"
             >
             <Link
-            href="https://mirror.xyz/metanorm.eth"
+            href="https://metanorm.mirror.xyz/"
             variant="none"
             isExternal
             >
@@ -194,6 +193,8 @@ function App() {
           </VStack>
         </Grid>
       </Box>
+      <NoiseOverlay />
+    </>
     </ChakraProvider>
   );
 }
