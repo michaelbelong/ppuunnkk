@@ -22,7 +22,7 @@ import './styles.css';
 export const myTheme = extendTheme({
   config: {
     useSystemColorMode: false,
-    initialColorMode: 'light',
+    initialColorMode: 'dark',
   },
   colors: {
     green: '#00FF46',
@@ -38,9 +38,7 @@ export const myTheme = extendTheme({
     global: props => ({
       body: {
         bg: mode('darkback', 'darkback')(props),
-        backgroundColor: '#192817',
-        backgroundSize: '40px 40px',
-        backgroundPosition: '0 0, 0 20px, 20px -20px, -20px 0px',
+        backgroundColor: '#000000',
       },
     }),
   },
