@@ -1,9 +1,14 @@
 @import url("https://v1.fontapi.ir/css/SFMono:400");
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
+
 @font-face {
-  font-family: "Projection";
-  src: url("https://okpc.app/fonts/projection.woff") format("woff");
+  font-family: 'CMU Typewriter Text';
+  src: url('../fonts/CMUTypewriter-Regular.woff2') format('woff2'),
+    url('../fonts/CMUTypewriter-Regular.woff') format('woff');
+  font-weight: 1000;
+  font-style: normal;
+  font-display: swap;
 }
+
 
 :root {
   --chakra-fonts-heading: "Projection", -apple-system, BlinkMacSystemFont,
@@ -19,7 +24,9 @@
 	"Segoe UI Emoji", "Segoe UI Symbol" !important;
 }
 
-body.chakra-ui-light {
+/* OLD BACKGROUNDS */
+
+/* body.chakra-ui-light {
 	background-color: #192817; 
 	background-image: linear-gradient(45deg, #B5FF00 25%, transparent 25%), linear-gradient(-45deg, #B5FF00 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #B5FF00 75%), linear-gradient(-45deg, transparent 75%, #B5FF00 75%);
 	background-size: 40px 40px;
@@ -27,7 +34,7 @@ body.chakra-ui-light {
 	min-height: 100vh;
 	font-size: calc(10px + 2vmin);
 	color: black;
-	/* z-index: 1; */
+	z-index: 1;
   }
 
 
@@ -39,39 +46,59 @@ body.chakra-ui-dark {
   min-height: 100vh;
   font-size: calc(10px + 2vmin);
   color: black;
-  /* z-index: 1; */
+  z-index: 1;
+} */
+
+body.chakra-ui-light {
+  background-color: #192817; 
+  background-image: url('./pstr/PunkEnergyless.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-position: center center;
+  overflow-y: hidden;
+  font-size: calc(10px + 2vmin);
+  color: black;
 }
 
+body.chakra-ui-dark {
+  background-color: #192817; 
+  background-image: url('./pstr/Punkless.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-position: center center;
+  overflow-y: hidden;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
 
 Button {
 	font-weight: 400 !important;
 	transition: all 3s ease-in-out;
 }
 
+p {
+  font-family: 'CMU Typewriter Text';
+  text-transform: uppercase;
+}
+
 Button:hover {
 	text-decoration: none;
-	/* font-weight: 600 !important; */
-	transform: scale(1.01) !important;
-	/* transition: all 1s ease-in-out; */
+	font-weight: 600 !important;
+	transform: scale(1.0666) !important;
 	cursor: default;
 }
 
 IconButton.chakra-ui-light {
-	background-color: #FF00C4;
+	background-color: none;
 }
 
 #Layer_1 {
   width: 28px;
   height: 28px;
 }
-
-/* #noise {
-  z-index: 9999999999;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  pointer-events: none;
-  opacity: .14;
-} */

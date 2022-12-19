@@ -1,18 +1,7 @@
 import React from 'react';
-import { Image, keyframes, usePrefersReducedMotion } from '@chakra-ui/react';
-import logo from '../PUNK.gif';
-
-const spin = keyframes`
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-`;
+import { Image } from '@chakra-ui/react';
+import logo from '../assets/brand/ppuunnkk.gif';
 
 export const Logo = props => {
-  const prefersReducedMotion = usePrefersReducedMotion();
-
-  const animation = prefersReducedMotion
-    ? undefined
-    : `${spin} infinite 30s linear`;
-
-  return <Image animation={animation} src={logo} {...props} />;
+  return <Image src={logo} {...props} />;
 };
