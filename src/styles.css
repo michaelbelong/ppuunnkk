@@ -1,9 +1,14 @@
 @import url("https://v1.fontapi.ir/css/SFMono:400");
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
+
 @font-face {
-  font-family: "Projection";
-  src: url("https://okpc.app/fonts/projection.woff") format("woff");
+  font-family: 'CMU Typewriter Text';
+  src: url('../fonts/CMUTypewriter-Regular.woff2') format('woff2'),
+    url('../fonts/CMUTypewriter-Regular.woff') format('woff');
+  font-weight: 1000;
+  font-style: normal;
+  font-display: swap;
 }
+
 
 :root {
   --chakra-fonts-heading: "Projection", -apple-system, BlinkMacSystemFont,
@@ -77,11 +82,15 @@ Button {
 	transition: all 3s ease-in-out;
 }
 
+p {
+  font-family: 'CMU Typewriter Text';
+  text-transform: uppercase;
+}
+
 Button:hover {
 	text-decoration: none;
-	/* font-weight: 600 !important; */
+	font-weight: 600 !important;
 	transform: scale(1.0666) !important;
-	/* transition: all 1s ease-in-out; */
 	cursor: default;
 }
 

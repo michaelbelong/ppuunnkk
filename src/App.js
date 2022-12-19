@@ -16,9 +16,7 @@ import { NoiseOverlay } from './components/NoiseOverlay';
 import WordmarkDark from './assets/brand/ppuunnkk.gif';
 import Toaster from './components/Toaster';
 import { mode } from '@chakra-ui/theme-tools';
-
 import "./styles.css";
-// import Noise from './noise'
 
 const myTheme = extendTheme({
   config: {
@@ -99,11 +97,13 @@ function App() {
                 _hover={ { bg: 'black', color: 'green' } }
               >
                 <Link
+                fontFamily="CMU Typewriter Text"
+                
                 href="https://fcast.me/punk"
                 variant="none"
                 isExternal
                 >
-                𝙵𝙰𝚁𝙲
+                <p>Farc</p>
                 </Link>
               </Button>
             <Button
@@ -120,7 +120,7 @@ function App() {
               variant="none"
               isExternal
               >
-              𝙲𝚁𝚃𝙰
+              <p>Know</p>
               </Link>
             </Button>
             <Button
@@ -134,11 +134,11 @@ function App() {
               _hover={ { bg: 'black', color: 'pink' } }
             >
               <Link
-              href="https://www.twitter.com/ppuunnkkdotcom"
+              href="https://metanorm.mirror.xyz/"
               variant="none"
               isExternal
               >
-              𝚃𝚆𝚃𝚁
+              <p>Read</p>
               </Link>
             </Button>
             <Button
@@ -156,7 +156,7 @@ function App() {
             variant="none"
             isExternal
             >
-              𝙳𝙲𝚁𝙳
+              <p>Love</p>
               </Link>
             </Button>
             <Button
@@ -170,11 +170,11 @@ function App() {
               variant="none"
             >
             <Link
-            href="https://metanorm.mirror.xyz/"
+            href="https://www.twitter.com/ppuunnkkdotcom"
             variant="none"
             isExternal
             >
-              𝙼𝙸𝚁𝚁
+              <p>Dumb</p>
               </Link>
             </Button>
             <Toaster />
