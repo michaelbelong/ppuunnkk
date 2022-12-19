@@ -1,28 +1,18 @@
 import './Toaster.css'
-import React, { useState } from 'react';
 import {
-	ChakraProvider,
 	Box,
-	Text,
 	Button,
-	Flex,
-	Code,
-	Grid,
-	Image,
-	theme,
-	Toast,
 	useToast,
-	extendTheme
 } from '@chakra-ui/react';
-import catchPhrases from './catchPhrases'
+import CatchPhrases from './CatchPhrases'
 
 function Toaster() {
 
-	const randomPhrase = catchPhrases[Math.floor(Math.random() * catchPhrases.length)];
+	const randomPhrase = CatchPhrases[Math.floor(Math.random() * CatchPhrases.length)];
 
 	let setRandomPhrase = ''
 	const generateRandomPhrase = () => {
-		const randomPhrase = catchPhrases[Math.floor(Math.random() * catchPhrases.length)];
+		const randomPhrase = CatchPhrases[Math.floor(Math.random() * CatchPhrases.length)];
 		console.log(randomPhrase);
 		setRandomPhrase(randomPhrase);
 	};

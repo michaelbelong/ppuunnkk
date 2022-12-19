@@ -46,7 +46,7 @@ body.chakra-ui-dark {
 
 body.chakra-ui-light {
   background-color: #192817; 
-  background-image: url('./pstr/pstr005.png');
+  background-image: url('./pstr/PunkEnergyless.jpg');
   background-repeat: no-repeat;
   background-size: 100% auto;
   -webkit-background-size: 100% auto;
@@ -60,7 +60,7 @@ body.chakra-ui-light {
 
 body.chakra-ui-dark {
   background-color: #192817; 
-  background-image: url('./pstr/pstr002.png');
+  background-image: url('./pstr/Punkless.jpg');
   background-repeat: no-repeat;
   background-size: 100% auto;
   -webkit-background-size: 100% auto;
@@ -80,13 +80,13 @@ Button {
 Button:hover {
 	text-decoration: none;
 	/* font-weight: 600 !important; */
-	transform: scale(1.01) !important;
+	transform: scale(1.0666) !important;
 	/* transition: all 1s ease-in-out; */
 	cursor: default;
 }
 
 IconButton.chakra-ui-light {
-	background-color: #FF00C4;
+	background-color: none;
 }
 
 #Layer_1 {
