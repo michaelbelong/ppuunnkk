@@ -17,6 +17,8 @@ import WordmarkDark from './assets/brand/ppuunnkk.gif';
 import Toaster from './components/Toaster';
 import { mode } from '@chakra-ui/theme-tools';
 import "./styles.css";
+// Next line is potentially very important
+import CatchPhrases from './components/CatchPhrases'
 
 const myTheme = extendTheme({
   config: {
