@@ -38,8 +38,11 @@ const myTheme = extendTheme({
       body: {
         bg: mode('darkback', 'darkback')(props),
         backgroundColor: '#192817',
-        backgroundSize: '40px 40px',
-        backgroundPosition: '0 0, 0 20px, 20px -20px, -20px 0px'
+        backgroundImage: "url('./pstr/Punkless.jpg')",
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: '100% auto',
+        bp: 'center center',
+        overflowY: 'hidden',
       }
     })
   }
@@ -70,7 +73,7 @@ function App() {
           isExternal
           >
           <Image
-          w={['64vw','45vw','45vw','33vw']}
+          w={['44vw','45vw','45vw','33vw']}
           h='auto'
           src={WordmarkDark} className="Wordmark" alt="𝙿𝙴𝙾𝙿𝙻𝙴’𝚂 𝚄𝙽𝙸𝚃𝙴𝙳 𝙸𝙽 𝙽𝙾𝙽-𝙺𝙾𝙽𝙵𝙾𝚁𝙼𝙸𝚃𝚈" pointerEvents="none" />
           </Link>
