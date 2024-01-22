@@ -4,7 +4,7 @@ import {
 	Button,
 	useToast,
 } from '@chakra-ui/react';
-import CatchPhrases from '../CatchPhrases'
+import CatchPhrases from '../CatchPhrases';
 
 function Toaster() {
 
