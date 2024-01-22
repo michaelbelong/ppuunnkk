@@ -97,12 +97,12 @@ function App() {
                 fontSize={['3xl','1xl','1xl','2xl']}
                 target="_self"
                 rel="noopener noreferrer"
-                _hover={ { bg: 'black', color: 'green' } }
+                _hover={ { bg: 'black', color: 'purple' } }
               >
                 <Link
                 fontFamily="CMU Typewriter Text"
                 
-                href="https://fcast.me/punk"
+                href="https://www.warpcast.com/punk"
                 variant="none"
                 isExternal
                 >
