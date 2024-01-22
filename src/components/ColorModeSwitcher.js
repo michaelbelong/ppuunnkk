@@ -17,7 +17,7 @@ export const ColorModeSwitcher = props => {
       color="chartreuse"
       marginLeft="2"
       borderRadius="none"
-      _hover={ { br: 'none', color: 'yellow', bgColor: 'pink' } }
+      _hover={{ br: 'none', color: 'yellow', bgColor: 'pink' }}
       onClick={toggleColorMode}
       icon={<SwitchIcon />}
       {...props}
